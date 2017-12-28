@@ -11,7 +11,7 @@ gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
 
   gem 'sqlite3', group: :development
-   gem 'pg', '0.18.1', group: :production
+   gem 'pg', group: :production
 
 
 gem 'rails_12factor', group: :production
@@ -28,6 +28,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -43,8 +44,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  gem 'simple_form', '~> 3.5'
-  gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+
 
 
 end
@@ -52,3 +52,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.3'
+gem 'simple_form'
