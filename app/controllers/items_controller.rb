@@ -25,6 +25,12 @@ class ItemsController < ApplicationController
   def show
   end
 
+  def complete
+    @item = Item.find(params[:id])
+    @item.update_attribute(:completed_at, Time.now)
+    redirect_to root_path
+  end
+
   def edit
   end
 
@@ -42,8 +48,10 @@ def destroy
   redirect_to root_path
 end
   def create
+    @user=current_user
     @item = current_user.items.build(item_params)
     if @item.save
+      ExampleMailer.sample_email(@user).deliver_now
       redirect_to root_path
     else
       render 'new'

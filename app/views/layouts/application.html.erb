@@ -4,8 +4,13 @@
     <title>Checklist</title>
     <%= csrf_meta_tags %>
 
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
   </head>
 
   <body>
@@ -32,6 +37,11 @@
     <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 
+<div class="container">
+
+
+
     <%= yield %>
+    </div>
   </body>
 </html>
