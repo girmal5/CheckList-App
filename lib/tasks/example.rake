@@ -1,3 +1,3 @@
 task example: :environment do
-  ExampleMailer.sample_email.deliver
+  HardWorker.perform_async
 end
