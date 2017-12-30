@@ -22,6 +22,7 @@ class ItemsController < ApplicationController
     @item = current_user.items.build
   end
 
+
   def show
   end
 

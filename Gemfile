@@ -55,3 +55,4 @@ gem 'devise', '~> 4.3'
 gem 'simple_form'
 gem 'whenever', require:false
 gem 'sidekiq', '~> 5.0', '>= 5.0.5'
+gem 'activeadmin'
