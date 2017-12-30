@@ -7,4 +7,5 @@ resources :items do
 end
 
 root 'items#index'
+
 end

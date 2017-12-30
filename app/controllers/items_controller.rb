@@ -51,7 +51,7 @@ end
     @user=current_user
     @item = current_user.items.build(item_params)
     if @item.save
-      ExampleMailer.sample_email(@user).deliver_now
+  # ExampleMailer.sample_email(@user).deliver_now
       redirect_to root_path
     else
       render 'new'
