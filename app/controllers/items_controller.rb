@@ -43,6 +43,19 @@ class ItemsController < ApplicationController
     end
   end
 
+  def set_checkbox
+         @item = Item.find(params[:plan_id])
+         STDOUT.puts @item.to_json
+         if(@item.checkbox == true)
+
+            @item.update!(checkbox: false)
+        else
+             @item.update_attribute(:completed_at, Time.now)
+           @item.update!(checkbox: true)
+        end
+
+     end
+
 
 def destroy
   @item.destroy

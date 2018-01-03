@@ -13,4 +13,6 @@ end
 
 root 'items#index'
 
+get '/insert_checkbox' => 'items#set_checkbox'
+
 end

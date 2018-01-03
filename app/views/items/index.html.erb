@@ -11,13 +11,14 @@
 							<p style="opacity: 0.5;" class="time-created-at item-sub-title">Completed <%= time_ago_in_words(item.completed_at) %> ago</p>
 						</div>
 						<div class="col-md-2">
-							<p><%= link_to complete_item_path(item), method: :patch do %></p>
-								<i class="fa fa-check fa-lg"></i>
+							<!-- <p><%= link_to complete_item_path(item), method: :patch do %></p>
+								<i class="fa fa-check fa-lg"></i> -->
+
 							<% end %>
 						</div>
 						<div class="col-md-2">
-							<p><%= link_to item, method: :delete, data: { confirm: "Are you sure?" } do %></p>
-								<i class="fa fa-trash fa-lg"></i>
+							<!-- <p><%= link_to item, method: :delete, data: { confirm: "Are you sure?" } do %></p>
+								<i class="fa fa-trash fa-lg"></i> -->
 							<% end %>
 						</div>
 					</div>
@@ -37,6 +38,11 @@
 						<div class="col-md-2">
 							<!-- <p><%= link_to item, method: :delete, data: { confirm: "Are you sure?" } do %></p>
 								<i class="fa fa-trash fa-lg"></i> -->
+
+								<input type="checkbox" id="checkbox-users-show" 	<%= item.checkbox == true ? 'checked': '' %> onclick="sendCheckRequest(<%=item.id%>)">
+
+<!-- <input type="checkbox" id="checkbox-users-show" onclick="sendCheckRequest(<%=item.id%>)"> -->
+
 							<% end %>
 						</div>
 					</div>
@@ -48,3 +54,24 @@
 <% else %>
 	<%= render 'layouts/static_landing_page' %>
 <% end %>
+
+
+
+<script type="text/javascript">
+function sendCheckRequest(find_item){
+	console.log("item id:"+ find_item)
+	 $.ajax({
+		url: '../insert_checkbox',
+		type: 'GET',
+		  data: {'plan_id': find_item},
+		  dataType: "json",
+
+    success: function(data){
+			alert("Success");
+		},
+    error: function(data){
+      alert("Failure");
+    }
+	});
+}
+</script>

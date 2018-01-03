@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180102073248) do
+ActiveRecord::Schema.define(version: 20180102133547) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20180102073248) do
     t.integer "user_id"
     t.datetime "completed_at"
     t.text "managerdesc"
+    t.boolean "checkbox", default: false
   end
 
   create_table "users", force: :cascade do |t|

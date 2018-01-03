@@ -2,7 +2,7 @@ ActiveAdmin.register Item do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
- permit_params :managerdesc, :title, :attributes, :on, :model
+ permit_params :managerdesc, :title, :destroy, :edit, :completed_at
 #
 # or
 #
@@ -11,8 +11,6 @@ ActiveAdmin.register Item do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
-
 
 
 end
