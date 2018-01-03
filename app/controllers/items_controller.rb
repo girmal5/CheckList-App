@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
     if user_signed_in?
     # @items = Item.all.order("created_at DESC")
       @items = Item.where(:user_id => current_user.id).order("created_at DESC")
+    
     end
   end
 
