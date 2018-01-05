@@ -57,6 +57,7 @@
 
 
 
+
 <script type="text/javascript">
 function sendCheckRequest(find_item){
 	console.log("item id:"+ find_item)
@@ -66,12 +67,8 @@ function sendCheckRequest(find_item){
 		  data: {'plan_id': find_item},
 		  dataType: "json",
 
-    success: function(data){
-			alert("Success");
-		},
-    error: function(data){
-      alert("Failure");
-    }
+
 	});
+	location.reload();
 }
 </script>

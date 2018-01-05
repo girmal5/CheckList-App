@@ -15,4 +15,7 @@ root 'items#index'
 
 get '/insert_checkbox' => 'items#set_checkbox'
 
+get '/sortedbyday' => 'byday#index'
+
+
 end

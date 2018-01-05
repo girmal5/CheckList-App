@@ -1,0 +1,16 @@
+
+  												<% @dates.each do |date| %>
+
+  															<%=date%>
+  						<%@items.where(date: date).each do |item|%>
+  																<%= item.title %> <br>
+  																	<%end%>
+
+
+  											<%@items.where(date: date).each do |item|%>
+
+
+  																<%end%>
+
+
+  											<%end%>

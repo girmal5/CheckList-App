@@ -1,8 +1,18 @@
 <%= simple_form_for @item do |f| %>
-<%= f.input :title, label: "Item" %>
-<%= f.input :description %>
 
+
+<%= f.input :title, label: "Item", as: :text%>
+<%= f.input :date, label: "Date", as: :text%>
+
+
+
+
+
+<!-- <%= f.input :description, as: :text, :wrapper_html => { :style => 'display: inline' } %>
+ -->
 
 <%= f.button :submit %>
 
 <%end%>
+
+ <!-- as: :text , :wrapper_html => { :style => 'display: inline' }, input_html: {rows: 10, cols: 10} -->
